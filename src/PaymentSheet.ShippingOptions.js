@@ -12,7 +12,8 @@ export default class ShippingOptions extends RenderableWidget {
     if (!shippingOptions || shippingOptions.length === 0) {
       return;
     }
-    const selected = shippingOptions.find(({ selected }) => selected); 
+    const selected = shippingOptions.find(({ selected }) => selected);
+    const selectedShippingLabel = selected.label + " " + selected.amount.value;
     const output = toOutput(selected);
     const changeHandler = ({ target }) => {
       const option = target.item(target.selectedIndex);
@@ -30,10 +31,8 @@ export default class ShippingOptions extends RenderableWidget {
       <td colspan="2">
         <label>
           Shipping: 
-          <select onchange="${changeHandler}">${
-            shippingOptions.map(toOption)
-          }</select>
         </label>
+        ${shippingOptions.map(toOption)}
       </td>
     </tr>`;
   }
@@ -54,7 +53,7 @@ function toOption(shippingOption) {
   const shippingAmount = new PaymentCurrencyAmount(currency, value).toString();
   return hyperHTML.wire(shippingOption)
   `
-    <option
+    <lebal
       dir="${dir}"
       lang="${lang}"
       name="shippingOption"
@@ -62,9 +61,21 @@ function toOption(shippingOption) {
       value="${id}">
         ${label} 
         ${shippingAmount}
-    </option>
+    </label>
   `;
-
+  /*
+  `
+    <lebal
+      dir="${dir}"
+      lang="${lang}"
+      name="shippingOption"
+      selected="${selected}"
+      value="${id}">
+        ${label} 
+        ${shippingAmount}
+    </label>
+  `;
+  */
 }
 
 function toOutput({

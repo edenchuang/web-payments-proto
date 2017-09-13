@@ -337,7 +337,7 @@ input {
 }
 
 #payment-sheet label {
-  font-size: .8em;
+  font-size: 1em;
 }
 
 #payment-sheet input[type="checkbox"] {

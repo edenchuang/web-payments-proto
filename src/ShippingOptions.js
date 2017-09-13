@@ -57,6 +57,7 @@ export default class ShippingOptions extends EventTarget(["change"]) {
 }
 
 function toHTML(shippingOption) {
+  console.log(shippingOption.label + shippingOption.amount.value)
   return hyperHTML.wire(shippingOption)`
   <dt>
     <input
@@ -70,7 +71,7 @@ function toHTML(shippingOption) {
     </label>
   </dt>
   <dd>
-    ${shippingOption.amount}
+    ${shippingOption.amount.toString()}
   </dd>
   `;
 }

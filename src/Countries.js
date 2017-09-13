@@ -217,7 +217,7 @@ export const countries = new Map([
   ["SE", { name: "Sweden" }],
   ["CH", { name: "Switzerland" }],
   ["SY", { name: "Syrian Arab Republic" }],
-  ["TW", { name: "Taiwan, Province of China" }],
+  ["TW", { name: "Taiwan" }],
   ["TJ", { name: "Tajikistan" }],
   ["TZ", { name: "Tanzania, United Republic of" }],
   ["TH", { name: "Thailand" }],
