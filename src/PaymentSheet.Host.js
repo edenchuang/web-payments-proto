@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 
 const privates = new WeakMap();
 

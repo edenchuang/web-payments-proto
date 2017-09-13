@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 import Countries from "../Countries";
 import EventTarget from "event-target-shim";
 import guid from "uuid/v4";

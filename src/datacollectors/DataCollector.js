@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml";
+import hyperHTML from "hyperhtml";
 import db from "../AutofillDB";
 import EventTarget from "event-target-shim";
 //import FormData from "formdata-polyfill";

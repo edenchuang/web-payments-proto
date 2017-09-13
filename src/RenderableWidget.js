@@ -1,5 +1,5 @@
 import EventTarget from "event-target-shim";
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 const privates = new WeakMap();
 
 export default class RenderableWidget extends EventTarget {

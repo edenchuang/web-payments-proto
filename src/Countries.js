@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 export const countries = new Map([
   ["AF", { name: "Afghanistan" }],
   ["AX", { name: "land Islands" }],

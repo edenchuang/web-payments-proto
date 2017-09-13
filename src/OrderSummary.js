@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml";
+import hyperHTML from "hyperhtml";
 import PaymentCurrencyAmount from "./PaymentCurrencyAmount";
 import PaymentShippingOption from "./PaymentShippingOption";
 import PaymentItem from "./PaymentItem";

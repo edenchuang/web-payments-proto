@@ -8,7 +8,7 @@ import db from "./AutofillDB";
 import dialogPolyfill from "dialog-polyfill/dialog-polyfill";
 import EventTarget from "event-target-shim";
 import Host from "./PaymentSheet.Host";
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 import LineItems from "./PaymentSheet.LineItems";
 import PaymentMethodChooser from "./datacollectors/PaymentMethodChooser";
 import ShippingOptions from "./PaymentSheet.ShippingOptions";
@@ -164,7 +164,7 @@ class PaymentSheet extends EventTarget(eventListeners) {
     const host = priv.get("host-widget");
     const dataSheetsManager = priv.get("dataSheetManager");
     const currentSheet = dataSheetsManager.active;
-    renderer`
+    const html = renderer`
       <h1>
         <img src="./payment-sheet/images/logo-payment.png" alt="">Firefox Web Payment
       </h1>
@@ -177,6 +177,7 @@ class PaymentSheet extends EventTarget(eventListeners) {
     if (currentSheet) {
       await currentSheet.validate();
     }
+    return html;
   }
 }
 
@@ -259,9 +260,9 @@ async function init() {
   const dataSheetManager = await new DataSheetManager(sheets).ready;
   console.log("dataSheetManager READY!");
   priv.set("dataSheetManager", dataSheetManager);
-  dataSheetManager.addEventListener("update", () => {
+  dataSheetManager.addEventListener("update", async () => {
     console.log("showing new sheet...");
-    this.render();
+    await this.render();
   });
 
   dataSheetManager.addEventListener("done", ({ detail: collectedData }) => {

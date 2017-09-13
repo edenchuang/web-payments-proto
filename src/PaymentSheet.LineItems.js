@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 import RenderableWidget from "./RenderableWidget";
 import PaymentCurrencyAmount from "./PaymentCurrencyAmount";
 const privates = new WeakMap();

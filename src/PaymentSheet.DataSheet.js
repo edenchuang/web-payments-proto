@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml";
+import hyperHTML from "hyperhtml";
 import Controls from "./PaymentSheet.DataSheetControls";
 import EventTarget from "event-target-shim";
 const privates = new WeakMap();

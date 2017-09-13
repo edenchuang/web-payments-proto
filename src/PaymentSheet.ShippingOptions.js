@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 import EventTarget from "event-target-shim";
 import PaymentCurrencyAmount from "./PaymentCurrencyAmount";
 import RenderableWidget from "./RenderableWidget";

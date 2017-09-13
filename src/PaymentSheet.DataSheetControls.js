@@ -1,4 +1,4 @@
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 import EventTarget from "event-target-shim";
 
 const defaultLabels = Object.freeze({

@@ -1,5 +1,5 @@
 import EventTarget from "event-target-shim";
-import hyperHTML from "hyperhtml/hyperhtml.js";
+import hyperHTML from "hyperhtml";
 import PaymentShippingOption from "./PaymentShippingOption.js";
 
 const privates = new WeakMap();
