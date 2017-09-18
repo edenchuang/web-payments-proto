@@ -19213,7 +19213,8 @@ class DataSheet extends __WEBPACK_IMPORTED_MODULE_2_event_target_shim___default(
 
   reset() {
     const priv = privates.get(this);
-    priv.get("dataCollector").form.reset();
+    // priv.get("dataCollector").form.reset();
+    priv.get("dataCollector").reset();
   }
 
   render(requestData) {
@@ -19352,7 +19353,7 @@ class DataSheetManager extends __WEBPACK_IMPORTED_MODULE_0_event_target_shim___d
     const sheets = priv.get("dataSheets");
     sheets.forEach(sheet => sheet.reset());
     // find the first invalid sheet
-    this.active = sheets.find(sheet => !sheet.isValid) ||
+    this.active = sheets.find(sheet => !sheet.isValid || sheet.userMustChoose) ||
       sheets[sheets.length - 1];
   }
   update(requestData) {

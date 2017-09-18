@@ -45,7 +45,7 @@ export default class DataSheetManager extends EventTarget(["done", "update"]) {
     const sheets = priv.get("dataSheets");
     sheets.forEach(sheet => sheet.reset());
     // find the first invalid sheet
-    this.active = sheets.find(sheet => !sheet.isValid) ||
+    this.active = sheets.find(sheet => !sheet.isValid || sheet.userMustChoose) ||
       sheets[sheets.length - 1];
   }
   update(requestData) {

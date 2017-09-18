@@ -87,7 +87,8 @@ export default class DataSheet extends EventTarget(["abort"]) {
 
   reset() {
     const priv = privates.get(this);
-    priv.get("dataCollector").form.reset();
+    // priv.get("dataCollector").form.reset();
+    priv.get("dataCollector").reset();
   }
 
   render(requestData) {
